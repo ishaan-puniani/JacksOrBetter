@@ -11,7 +11,7 @@ function getServerResponse(action, callback, objToPost) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "http://platform-gameolive.rhcloud.com/api/games/play",
+        "url": "https://platform-gameolive.rhcloud.com/api/games/play",
         "method": "POST",
         "headers": {
             "cache-control": "no-cache",
