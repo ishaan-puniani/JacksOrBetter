@@ -59,7 +59,7 @@ FB.getLoginStatus(function(response) {
     </head>
     <body ondragstart="return false;" ondrop="return false;">
 	   
-        <canvas id="canvas" class="ani_hack" width="760 " height="768" style="width: 512.5px; height: 205px; top: 0px; left: 426.75px;"> </canvas>
+        <canvas id="canvas" class="ani_hack" width="1920 " height="768" style="width: 512.5px; height: 205px; top: 0px; left: 426.75px;"> </canvas>
         <div id="block_game" style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%; display:none"></div>
 <script>
 // Place following code after FB.init call.
