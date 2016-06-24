@@ -102,7 +102,7 @@ function getHeightOfIOSToolbars() {
 function sizeHandler() {
 	window.scrollTo(0, 1);
 
-	if (!$("#canvas")){
+	/*if (!$("#canvas")){
 		return;
 	}
 
@@ -177,7 +177,7 @@ console.log("destW",destW,"destH",destH)
         }
         
         $("#canvas").css("left",fOffsetX+"px");
-
+*/
 };
 
 function createBitmap(oSprite, iWidth, iHeight){
