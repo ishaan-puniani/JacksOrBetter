@@ -16,7 +16,20 @@
       xfbml      : true,
       version    : 'v2.6'
     });
-
+	console.log("FB",FB);
+FB.getLoginStatus(function(response) {
+  // Check login status on load, and if the user is
+  // already logged in, go directly to the welcome message.
+  console.log("FB response",response);
+  if (response.status == 'connected') {
+    onLogin(response);
+  } else {
+    // Otherwise, show Login dialog first.
+    FB.login(function(response) {
+      onLogin(response);
+    }, {scope: 'user_friends, email'});
+  }
+});
     // ADD ADDITIONAL FACEBOOK CODE HERE
   };
 
@@ -52,23 +65,7 @@ function onLogin(response) {
     });
   }
 }
-$(document).ready(function () {
-	debugger;
-	console.log("FB",FB);
-FB.getLoginStatus(function(response) {
-  // Check login status on load, and if the user is
-  // already logged in, go directly to the welcome message.
-  console.log("FB response",response);
-  if (response.status == 'connected') {
-    onLogin(response);
-  } else {
-    // Otherwise, show Login dialog first.
-    FB.login(function(response) {
-      onLogin(response);
-    }, {scope: 'user_friends, email'});
-  }
-});
-});
+
 </script>
     </body>
 </html>
