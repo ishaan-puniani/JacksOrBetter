@@ -1,0 +1,15 @@
+{
+  "name": "JackOrBetter",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "*"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-ts": "^1.11.13"
+  }
+}
