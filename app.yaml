@@ -1,0 +1,27 @@
+application: jackorbetter-client
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /dist
+  static_dir: dist
+  
+- url: /sprites
+  static_dir: sprites  
+  
+- url: /sounds
+  static_dir: sounds  
+  
+- url: .*
+  script: main.php
+
+env_variables:
+ DEVELOPMENT_DB_HOST: ''
+ DEVELOPMENT_DB_USERNAME: ''
+ DEVELOPMENT_DB_PASSWORD: ''
+ DEVELOPMENT_DB_NAME: ''
+ PRODUCTION_CLOUD_SQL_INSTANCE: ''
+ PRODUCTION_DB_USERNAME: ''
+ PRODUCTION_DB_PASSWORD: ''
+ PRODUCTION_DB_NAME: ''
