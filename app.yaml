@@ -12,6 +12,9 @@ handlers:
   
 - url: /sounds
   static_dir: sounds  
+
+- url: /game
+  script: game.php
   
 - url: .*
   script: main.php
