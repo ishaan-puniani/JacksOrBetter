@@ -30,6 +30,15 @@ FB.getLoginStatus(function(response) {
     }, {scope: 'user_friends, email'});
   }
 });
+
+	function echoSize() {
+        $('#canvas').width(window.innerWidth).height(window.innerHeight);
+        
+      }
+      echoSize();
+      window.onresize = echoSize;
+	  
+	  
     // ADD ADDITIONAL FACEBOOK CODE HERE
   };
 
