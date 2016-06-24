@@ -68,7 +68,7 @@ FB.getLoginStatus(function(response) {
     }, {scope: 'user_friends, email'});
   }
 });
-}
+});
 </script>
     </body>
 </html>
