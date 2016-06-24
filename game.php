@@ -2,8 +2,8 @@
     <head>
         <title>GOL | Jack Or Better</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./css/reset.css" type="text/css">
-        <link rel="stylesheet" href="./css/main.css" type="text/css">
+        <link rel="stylesheet" href="./dist/production0.1.0.min.css" type="text/css">
+        
 
 
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,minimal-ui">
