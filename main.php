@@ -49,10 +49,8 @@ FB.getLoginStatus(function(response) {
         <script type="text/javascript" src="./dist/production0.1.0.min.js"></script>
     </head>
     <body ondragstart="return false;" ondrop="return false;">
-	<h1 id="fb-welcome"></h1>
-        <div style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%"></div>
-
-        <canvas id="canvas" class="ani_hack" width="1920" height="768" style="width: 512.5px; height: 205px; top: 0px; left: 426.75px;"> </canvas>
+	   
+        <canvas id="canvas" class="ani_hack" width="760 " height="768" style="width: 512.5px; height: 205px; top: 0px; left: 426.75px;"> </canvas>
         <div id="block_game" style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%; display:none"></div>
 <script>
 // Place following code after FB.init call.
@@ -60,8 +58,7 @@ FB.getLoginStatus(function(response) {
 function onLogin(response) {
   if (response.status == 'connected') {
     FB.api('/me?fields=first_name', function(data) {
-      var welcomeBlock = document.getElementById('fb-welcome');
-      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+      init(data)
     });
   }
 }

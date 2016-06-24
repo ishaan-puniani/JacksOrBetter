@@ -43,7 +43,7 @@ function getParamValue(paramName) {
     }
 }
 
-$(document).ready(function () {
+function init(loginInfo){
     getServerResponse('init', function (response) {
         var oMain = new CMain({
             //win_occurrence: 40, //WIN OCCURRENCE PERCENTAGE
@@ -58,7 +58,7 @@ $(document).ready(function () {
             recharge: true, //RECHARGE WHEN MONEY IS ZERO. SET THIS TO FALSE TO AVOID AUTOMATIC RECHARGE
             //num_hand_before_ads: 10                 //NUMBER OF HANDS TO COMPLETE, BEFORE TRIGGERING SAVE_SCORE EVENT. USEFUL FOR INTER-LEVEL AD EVENTUALLY.
         });
-    });
+    },loginInfo);
     if (isIphone()) {
         setTimeout(function () {
             sizeHandler();
@@ -66,4 +66,4 @@ $(document).ready(function () {
     } else {
         sizeHandler();
     }
-});
+}
