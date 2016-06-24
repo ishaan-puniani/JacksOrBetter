@@ -33,11 +33,12 @@ FB.getLoginStatus(function(response) {
 
 	function echoSize() {
         $('#canvas').width(window.innerWidth).height(window.innerHeight);
-        
+        $('#canvas').css('cssText', 'height:'+window.innerHeight+'px !important;');
+		$('#canvas').css('cssText', 'width:'+window.innerWidth+'px !important;');
       }
       echoSize();
       window.onresize = echoSize;
-	  
+	 
 	  
     // ADD ADDITIONAL FACEBOOK CODE HERE
   };
