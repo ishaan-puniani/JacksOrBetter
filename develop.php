@@ -11,6 +11,7 @@
         <meta name="msapplication-tap-highlight" content="no">
 	    <script>
             var GAMEID = "JackOrBetter_Server";
+            var SERVER_URL = "http://localhost:9000/api/games/play";
         </script>
 
         <script type="text/javascript" src="./dist/production0.1.0.min.js"></script>

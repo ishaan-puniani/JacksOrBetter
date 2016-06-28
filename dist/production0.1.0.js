@@ -2346,7 +2346,7 @@ function getServerResponse(action, callback, objToPost) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "http://localhost:9000/api/games/play",
+        "url": SERVER_URL,
         "method": "POST",
         "headers": {
             "cache-control": "no-cache",
@@ -2378,7 +2378,7 @@ function getParamValue(paramName) {
     }
 }
 
-$(document).ready(function () {
+function init(loginInfo){
     getServerResponse('init', function (response) {
         var oMain = new CMain({
             //win_occurrence: 40, //WIN OCCURRENCE PERCENTAGE
@@ -2393,7 +2393,7 @@ $(document).ready(function () {
             recharge: true, //RECHARGE WHEN MONEY IS ZERO. SET THIS TO FALSE TO AVOID AUTOMATIC RECHARGE
             //num_hand_before_ads: 10                 //NUMBER OF HANDS TO COMPLETE, BEFORE TRIGGERING SAVE_SCORE EVENT. USEFUL FOR INTER-LEVEL AD EVENTUALLY.
         });
-    });
+    },loginInfo);
     if (isIphone()) {
         setTimeout(function () {
             sizeHandler();
@@ -2401,7 +2401,7 @@ $(document).ready(function () {
     } else {
         sizeHandler();
     }
-});
+}
 
 /**
  * jQuery.browser.mobile (http://detectmobilebrowser.com/)
@@ -2464,6 +2464,7 @@ function getSize(Name) {
        else {
                // Default to use window["inner" + Name]
                size = window["inner" + Name];
+               console.log("window width");
        }
        return size;
 };
@@ -2519,7 +2520,7 @@ function sizeHandler() {
         }
         
         var w = getSize("Width");
-
+console.log("w",w,"h",h)
 	var multiplier = Math.min((h / CANVAS_HEIGHT), (w / CANVAS_WIDTH));
 
 	var destW = CANVAS_WIDTH * multiplier;
@@ -2535,7 +2536,7 @@ function sizeHandler() {
             destW += iAdd;
             destH += iAdd*(CANVAS_HEIGHT/CANVAS_WIDTH);
         }
-
+console.log("destW",destW,"destH",destH)
         var fOffsetY = ((h / 2) - (destH / 2));
         var fOffsetX = ((w / 2) - (destW / 2));
         var fGameInverseScaling = (CANVAS_WIDTH/destW);

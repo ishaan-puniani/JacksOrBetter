@@ -14,7 +14,7 @@ handlers:
   static_dir: sounds  
 
 - url: /game
-  script: game.php
+  script: facebook.php
   
 - url: .*
   script: main.php
